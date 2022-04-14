@@ -93,3 +93,14 @@ public class BattleshipGUI extends JFrame{
         } 
         
     }
+        public static void createAndShowGUI() {
+        //Create and set up the window.
+        BattleshipGUI frame = new BattleshipGUI("BattleshipGUI");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        //Set up the content pane.
+        frame.addComponentsToPane(frame.getContentPane());
+        //Display the window.
+        frame.pack();
+        frame.setVisible(true);
+    }
+}
