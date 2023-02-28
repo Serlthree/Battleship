@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class AddingComputerShips{
     //every method is static because I was too lazy to create an AddingComputerShips object
     private static ArrayList<Integer> shipWidth = new ArrayList<Integer>();

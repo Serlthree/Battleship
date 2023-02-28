@@ -1,3 +1,7 @@
+import javax.swing.JOptionPane;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
 public class AddingShips implements ActionListener{
     public static int numTwoWidthShips = 1;
     public static int numThreeWidthShips = 2;
@@ -17,7 +21,7 @@ public class AddingShips implements ActionListener{
                 "\n Number of three width ships: " + numThreeWidthShips + 
                 "\n Number of four width ships: " + numFourWidthShips + 
                 "\n Number of five width ships: " + numFiveWidthShips,
-                "Number of Ships", OK_CANCEL_OPTION, INFORMATION_MESSAGE,null,shipOptions,null);
+                "Number of Ships", JOptionPane.OK_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE,null,shipOptions,null);
         if(response == JOptionPane.OK_OPTION){
             String widthOfPlacedShip = JOptionPane.showInputDialog("Enter Width of Placed Ship");
             String row = JOptionPane.showInputDialog("Enter Row (First row is at 0)");
@@ -70,10 +74,13 @@ public class AddingShips implements ActionListener{
             else if(width == 5){
                 numFiveWidthShips--;
             }
+            else{
+                JOptionPane.showMessageDialog(null, "You have entered an invalid input. Please try again.", "ERROR: INVALID", JOptionPane.INFORMATION_MESSAGE);
+            }
         }
         else
         {
-            JOptionPane.showMessageDialog(null, "You have entered an invalid input. Please try again.", "ERROR: INVALID", INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null, "You have entered an invalid input. Please try again.", "ERROR: INVALID", JOptionPane.INFORMATION_MESSAGE);
         }
     }
     

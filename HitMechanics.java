@@ -1,3 +1,7 @@
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.JOptionPane;
+
 public class HitMechanics implements ActionListener {
     //battleship is a turn based game
     private int turn = 0;
@@ -89,10 +93,10 @@ public class HitMechanics implements ActionListener {
             }
         }
         if(playerNumGray == 0){
-            JOptionPane.showMessageDialog(null, "You Lost!", "You Lost!", INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null, "You Lost!", "You Lost!", JOptionPane.INFORMATION_MESSAGE);
         }
         else if(computerNumGray == 0){
-            JOptionPane.showMessageDialog(null, "You Won!", "You Won!", INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null, "You Won!", "You Won!", JOptionPane.INFORMATION_MESSAGE);
         }
     }
     

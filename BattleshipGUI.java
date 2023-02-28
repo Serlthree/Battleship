@@ -1,3 +1,13 @@
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JSeparator;
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.GridLayout;
+import java.awt.Container;
+
 public class BattleshipGUI extends JFrame{
     //creates GridLayout for display
     GridLayout playerGrid = new GridLayout(10,10);
@@ -78,7 +88,7 @@ public class BattleshipGUI extends JFrame{
         //added a direction message
         JOptionPane.showMessageDialog(null, "Add Ships to Begin. Click on the opponent's tile you want to hit once finished. "
                 + "Click again for your opponent to make a move. Once a player has sunk all of their enemies ships, they win.", 
-                "Directions", INFORMATION_MESSAGE);
+                "Directions", JOptionPane.INFORMATION_MESSAGE);
         
         //added a difficulty modifier
         String difficulty = JOptionPane.showInputDialog("Enter Difficulty (Easy, Medium, Hard)");
